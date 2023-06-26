@@ -5,9 +5,9 @@ import './styles.css';
 import { Icon } from 'leaflet';
 
 const markers = [
-  { geocode: [-29.797624, -51.864967], popUp: 'Ericaaaaaaa' },
-  { geocode: [-29.775748, -51.850232], popUp: 'Oi' },
-  { geocode: [-29.768068, -51.858737], popUp: 'cccc' },
+  { geocode: [-29.797624, -51.864967], popUp: 'Este é o primeiro ponto' },
+  { geocode: [-29.775748, -51.850232], popUp: 'Este é o segundo ponto' },
+  { geocode: [-29.768068, -51.858737], popUp: 'Este é o terceiro ponto' },
 ];
 
 function EventMap() {
@@ -28,8 +28,8 @@ function EventMap() {
 
 function Map() {
   const customIcon = new Icon({
-    iconUrl: 'https://api.iconify.design/ic:baseline-location-on.svg',
-    iconSize: [38, 38]
+    iconUrl: 'https://api.iconify.design/material-symbols:location-on.svg?color=%e74c3c',
+    iconSize: [50, 50]
   })
 
   return (
@@ -43,7 +43,7 @@ function Map() {
         />
         {
           markers.map((marker) => (
-            <Marker key={marker.geocode} position={marker.geocode}>
+            <Marker key={marker.geocode} position={marker.geocode} icon={customIcon}>
               <Popup>{marker.popUp}</Popup>
             </Marker>
           ))
