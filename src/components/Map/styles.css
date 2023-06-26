@@ -1,0 +1,39 @@
+.bg h1 {
+  font-family: 'Abril Fatface';
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #ca7d35;
+}
+
+.container {
+  height: 800px;
+  width: 1200px;
+  box-shadow: 1px 1px 7px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+button {
+  text-decoration: none;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #347ab8;
+  font-family: monospace;
+  color: white;
+}
+
+button:hover {
+  background-color: #3a89ce;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #2d6aa0;
+}
