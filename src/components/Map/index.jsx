@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMapEvent } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
+import { Icon } from 'leaflet';
 
 const markers = [
   { geocode: [-29.797624, -51.864967], popUp: 'Ericaaaaaaa' },
@@ -26,6 +27,10 @@ function EventMap() {
 }
 
 function Map() {
+  const customIcon = new Icon({
+    iconUrl: 'https://api.iconify.design/ic:baseline-location-on.svg',
+    iconSize: [38, 38]
+  })
 
   return (
     <div className='bg'>
